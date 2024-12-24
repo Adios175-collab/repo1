@@ -1,0 +1,84 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:d592c412-f19b-319c-a531-ead4825a55df -->
+<metadata name="sp_allMask2" path="/shared/examples/sp_allMask2" type="PROCEDURE" subtype="SQL_SCRIPT_PROCEDURE" changeToken="0" isFunction="true">
+  <parameters>
+    <parameter name="in_value" direction="IN" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="100"/>
+    </parameter>
+    <parameter name="result" direction="OUT" nullable="true">
+      <datatype name="VARCHAR" type="STRING" maxLength="100"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/lib/debug/Print" type="PROCEDURE">
+    <datatype type="PROCEDURE" refId="258">
+      <element name="textToPrint" direction="IN">
+        <datatype referenceDefinitionSet="/lib/util/System" referenceType="Text" type="STRING" maxLength="2147483647"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="Script" type="STRING">PROCEDURE sp_allMask2(
+    IN in_value VARCHAR(100),
+    OUT result VARCHAR(100)
+)
+BEGIN
+    DECLARE left_part VARCHAR(10);
+    DECLARE right_part VARCHAR(10);
+    DECLARE mask_length INT;
+
+
+    -- Check if in_value is a phone number (only digits and length of 10)
+     IF ISNUMERIC(in_value) = 1 THEN
+        -- type = 2 process customer&apos;s phone
+        SET left_part = LEFT(in_value, 5);
+        SET right_part = RIGHT(in_value, 5);
+        SET mask_length = LENGTH(in_value) - 10;
+
+        IF mask_length &gt; 0 THEN
+            SET result = left_part || REPEAT(&apos;*&apos;, mask_length) || right_part;
+        ELSE
+            SET result = in_value;
+        END IF;
+        
+    ELSE
+        -- type = 1 process customer&apos;s name
+        SET left_part = LEFT(in_value, 2);
+        SET right_part = RIGHT(in_value, 2);
+        SET mask_length = LENGTH(in_value) - 4;
+        CALL PRINT(&apos;Mask length: &apos; || mask_length);
+        IF mask_length &gt; 0 THEN
+            SET result = left_part || REPEAT(&apos;*&apos;, mask_length) || right_part;
+        ELSE
+            SET result = in_value;
+        END IF;
+    END IF;
+END
+</attribute>
+  <attribute name="creationDate" type="LONG">1734601630965</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">0</attribute>
+  <attribute name="impactLevelLabel" type="STRING">NONE</attribute>
+  <attribute name="impactMessage" type="NULL"/>
+  <attribute name="lastModifiedDate" type="LONG">1734609809226</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="native_only" type="STRING">false</attribute>
+  <attribute name="references" type="MAP">
+    <item>
+      <key type="STRING">14/29</key>
+      <value type="STRING_ARRAY">
+        <item>lib</item>
+        <item>debug</item>
+        <item>Print</item>
+      </value>
+    </item>
+  </attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1734601630965</attribute>
+</metadata>
