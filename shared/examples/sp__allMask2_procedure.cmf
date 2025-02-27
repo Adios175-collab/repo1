@@ -5,7 +5,7 @@
     <parameter name="in_value" direction="IN" nullable="true">
       <datatype name="VARCHAR" type="STRING" maxLength="100"/>
     </parameter>
-    <parameter name="result" direction="OUT" nullable="true">
+    <parameter name="result1" direction="OUT" nullable="true">
       <datatype name="VARCHAR" type="STRING" maxLength="100"/>
     </parameter>
   </parameters>
@@ -37,9 +37,9 @@ BEGIN
         SET mask_length = LENGTH(in_value) - 10;
 
         IF mask_length &gt; 0 THEN
-            SET result = left_part || REPEAT(&apos;*&apos;, mask_length) || right_part;
+            SET result1 = left_part || REPEAT(&apos;*&apos;, mask_length) || right_part;
         ELSE
-            SET result = in_value;
+            SET result1 = in_value;
         END IF;
         
     ELSE
@@ -49,9 +49,9 @@ BEGIN
         SET mask_length = LENGTH(in_value) - 4;
         CALL PRINT(&apos;Mask length: &apos; || mask_length);
         IF mask_length &gt; 0 THEN
-            SET result = left_part || REPEAT(&apos;*&apos;, mask_length) || right_part;
+            SET result1 = left_part || REPEAT(&apos;*&apos;, mask_length) || right_part;
         ELSE
-            SET result = in_value;
+            SET result1 = in_value;
         END IF;
     END IF;
 END
