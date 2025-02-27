@@ -2,7 +2,7 @@
 <!-- salt:d592c412-f19b-319c-a531-ead4825a55df -->
 <metadata name="LookupProduct" path="/shared/examples/LookupProduct" type="PROCEDURE" subtype="SQL_SCRIPT_PROCEDURE" changeToken="0">
   <parameters>
-    <parameter name="desiredProduct2" direction="IN" nullable="true">
+    <parameter name="desiredProduct3" direction="IN" nullable="true">
       <datatype name="INTEGER" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
     </parameter>
     <parameter name="result" direction="OUT" nullable="true">
@@ -80,7 +80,7 @@
     </datatype>
   </dependency>
   <attribute name="Script" type="STRING">PROCEDURE LookupProduct(
-    IN desiredProduct2 INTEGER,
+    IN desiredProduct3 INTEGER,
     OUT result CURSOR (
     &#x9;ProductName VARCHAR(50),
     &#x9;ProductID INTEGER,
@@ -101,7 +101,7 @@ BEGIN
         FROM     
             /shared/examples/ds_inventory/tutorial/products products FULL OUTER JOIN /shared/examples/ds_inventory/tutorial/employees employees ON products.productid = employees.employeeid
         WHERE
-            products.ProductID = desiredProduct2;
+            products.ProductID = desiredProduct3;
 END</attribute>
   <attribute name="cacheStorageSource" type="STRING">/lib/sources/cacheDataSource</attribute>
   <attribute name="cacheStorageTargets" type="MAP">
