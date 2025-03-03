@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:d592c412-f19b-319c-a531-ead4825a55df -->
+<metadata name="SP_GET_NESTED_GROUP_MEMBERS" path="/shared/Enterprise/Solutions/PeopleDS1/Database/PeopleDS/ENTERPRISE/N2K/SP_GET_NESTED_GROUP_MEMBERS" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <parameters>
+    <parameter name="groupName" direction="IN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+    </parameter>
+    <parameter name="result" direction="OUT" nullable="true">
+      <datatype name="STRUCT" extendedName="STRUCT" subType="DATASOURCE_TYPE" type="TABLE" refId="256">
+        <element name="grplevel">
+          <datatype name="INTEGER" extendedName="INTEGER" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+        </element>
+        <element name="hierarchy">
+          <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+        </element>
+        <element name="groupDn">
+          <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+        </element>
+        <element name="memberDn">
+          <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+        </element>
+        <element name="grpName">
+          <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+        </element>
+        <element name="member">
+          <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+        </element>
+      </datatype>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+  </security>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING">ldap</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20281</attribute>
+  <attribute name="creatorUserName" type="STRING">cchikkan</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1719673836139</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">ldap</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20281</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">cchikkan</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1716846479940</attribute>
+</metadata>

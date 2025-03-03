@@ -1,0 +1,554 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:d592c412-f19b-319c-a531-ead4825a55df -->
+<metadata name="D_GROUP_MEMBER" path="/shared/Enterprise/Solutions/PeopleDS1/Database/PeopleDS/ENTERPRISE/PDS_DIM/D_GROUP_MEMBER" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="GROUP_DN" nullable="false">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="GROUP_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="GROUP_FULL_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="GROUP_TYPE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="LIST_TYPE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="GROUP_DOMAIN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="GROUP_DESCRIPTION" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="GROUP_SUBSCRIPTION_POLICY" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="GROUP_MAIL" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_DN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_CN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_GUID" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_USERID" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_NUM" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_FIRST_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_MID_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_LAST_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_EMAIL" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_STATUS" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(1)" subType="DATASOURCE_TYPE" type="STRING" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_DEPT_ID" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_DEPARTMENT" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_BUSINESS_UNIT_ID" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_BUSINESS_UNIT" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_EXTENSION" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_CITY" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_STATE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_COUNTRY" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_AFFILIATION" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(250)" subType="DATASOURCE_TYPE" type="STRING" maxLength="250"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_LOCALE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_TYPE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_TYPE_DESC" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_AD_DOMAIN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMPLOYEE_EMAIL_DOMAIN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="ADMINISTRATOR" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(5)" subType="DATASOURCE_TYPE" type="STRING" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="OWNER" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(5)" subType="DATASOURCE_TYPE" type="STRING" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="MEMBER" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(5)" subType="DATASOURCE_TYPE" type="STRING" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes>
+    <index name="idx_emp_dn" type="OTHER" unique="false">
+      <indexColumn name="EMPLOYEE_DN" sortOrder="ASCENDING"/>
+    </index>
+    <index name="idx_emp_uid" type="OTHER" unique="false">
+      <indexColumn name="EMPLOYEE_USERID" sortOrder="ASCENDING"/>
+    </index>
+    <index name="idx_grp_dn" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="GROUP_DN" sortOrder="ASCENDING"/>
+    </index>
+    <index name="idx_grp_nm" type="OTHER" unique="false">
+      <indexColumn name="GROUP_NAME" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys>
+    <foreignKey name="fk1" primaryKeyName="pk_uid" primaryKeyTableName="/shared/Enterprise/Solutions/PeopleDS1/Database/PeopleDS/ENTERPRISE/PDS_DIM/D_EMPLOYEE">
+      <foreignKeyColumn primaryColumnName="UID" foreignColumnName="EMPLOYEE_USERID"/>
+    </foreignKey>
+  </foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+  </security>
+  <dependency target="/shared/Enterprise/Solutions/PeopleDS1/Database/PeopleDS/ENTERPRISE/PDS_DIM/D_EMPLOYEE" type="TABLE">
+    <datatype type="TABLE" refId="256">
+      <element name="QCGUID">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="EMPLOYEE_NUM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="NEW_HIRE_ID">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="DN">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="UID" nullable="false">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="UID_NUMBER">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="CN">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="FIRST_NAME">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="MID_NAME">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="LAST_NAME">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="FULL_NAME">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="PREFER_NAME">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="NICK_NAME">
+        <datatype type="STRING" maxLength="250"/>
+      </element>
+      <element name="EMAIL">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="EMAIL_ADDR">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="EMAIL_DOMAIN">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="FULL_PART_TIME_CD">
+        <datatype type="STRING" maxLength="1"/>
+      </element>
+      <element name="JOB_CD">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="TITLE">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="EMPLOYEE_TYPE">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="EMPLOYEE_TYPE_DESC">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="EMPLOYEE_STATUS">
+        <datatype type="STRING" maxLength="1"/>
+      </element>
+      <element name="HIRE_DT">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="STD_HOURS">
+        <datatype type="DECIMAL" maxDigits="10" maxFractionalDigits="2"/>
+      </element>
+      <element name="SUPERVISOR_EMPLOYEE_NUM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="SUPERVISOR">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="DEPT_ID">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DEPARTMENT">
+        <datatype type="STRING" maxLength="240"/>
+      </element>
+      <element name="BUSINESS_UNIT_ID">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="BUSINESS_UNIT">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="AFFILIATION">
+        <datatype type="STRING" maxLength="250"/>
+      </element>
+      <element name="LOCALE">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="OFFICE_LOC">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="OFFICE_SITE">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="CITY">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="STATE">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="COUNTRY">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="COUNTRY_ID">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="PHOTO">
+        <datatype type="STRING" maxLength="70"/>
+      </element>
+      <element name="EXTENSION">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="MOBILE">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="OTHER_PHONE">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="PAGER">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="FAX">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="SECRETARY">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="AD_DOMAIN">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="ACTIVE_FLAG">
+        <datatype type="STRING" maxLength="1"/>
+      </element>
+      <element name="ROLLOVER_EMP_NUM">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="TELEPHONE_NUMBER">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="DESCRIPTION">
+        <datatype type="STRING" maxLength="1000"/>
+      </element>
+      <element name="MAIL_HOST">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="LEGAL_HOLD_FLAG">
+        <datatype type="STRING" maxLength="1"/>
+      </element>
+      <element name="MODIFIED_DATETIME">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="SERVICE_DATE">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="JOB_FAMILY">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="ACQUISITION_ID">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="FULL_NAME_HR">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="FIRST_NAME_HR">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="LAST_NAME_HR">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="DEPT_HEAD_QCGUID">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="DEPT_HEAD_NAME">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="ONSITE_CLASSIFICATION">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="ONSITE_CLASSIFICATION_ACTIVE">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="RETURN_TO_WORK">
+        <datatype type="STRING" maxLength="10"/>
+      </element>
+      <element name="VP_APPROVED_RETURN_ONSITE">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="SVP_APPROVED_RETURN_ONSITE">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="EOT_APPROVED_RETURN_ONSITE">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="LAST_POLICY_ACK_DATE">
+        <datatype type="STRING" maxLength="25"/>
+      </element>
+      <element name="BADGE_TMPLT">
+        <datatype type="STRING" maxLength="7"/>
+      </element>
+      <element name="ALT_LANG_NAME">
+        <datatype type="STRING" maxLength="400"/>
+      </element>
+      <element name="LOCATION_ID">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="LOCATION_NAME">
+        <datatype type="STRING" maxLength="60"/>
+      </element>
+      <element name="SEZ_INDICATOR">
+        <datatype type="STRING" maxLength="1"/>
+      </element>
+      <element name="BUSINESS_TITLE">
+        <datatype type="STRING" maxLength="80"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">0</attribute>
+  <attribute name="creatorUserDomain" type="STRING">ldap</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20281</attribute>
+  <attribute name="creatorUserName" type="STRING">cchikkan</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1719673836139</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">ldap</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20281</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">cchikkan</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1716912647912</attribute>
+</metadata>

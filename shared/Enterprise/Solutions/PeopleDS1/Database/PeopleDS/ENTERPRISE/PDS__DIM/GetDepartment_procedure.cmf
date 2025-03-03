@@ -1,0 +1,151 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:d592c412-f19b-319c-a531-ead4825a55df -->
+<metadata name="GetDepartment" path="/shared/Enterprise/Solutions/PeopleDS1/Database/PeopleDS/ENTERPRISE/PDS_DIM/GetDepartment" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <parameters>
+    <parameter name="deptID" direction="IN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+    </parameter>
+    <parameter name="result" direction="OUT" nullable="true">
+      <datatype name="STRUCT" extendedName="STRUCT" subType="DATASOURCE_TYPE" type="TABLE" refId="256">
+        <element name="deptID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="name">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="description">
+          <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+        </element>
+        <element name="managerID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="managerName">
+          <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+        </element>
+        <element name="businessUnitID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="businessUnitDescription">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="businessUnit">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="majorBusinessUnitID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="majorBusinessUnit">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="totalBusinessUnitID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="totalBusinessUnit">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="segmentID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="segment">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="divisionID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="division">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="directorID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="directorName">
+          <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+        </element>
+        <element name="vpID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="vpName">
+          <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+        </element>
+        <element name="deptAnalystID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="deptAnalystName">
+          <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+        </element>
+        <element name="mgmtLevel1">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel2">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel3">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel4">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel5">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel6">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel7">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel1Desc">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel2Desc">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel3Desc">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel4Desc">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel5Desc">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel6Desc">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="mgmtLevel7Desc">
+          <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+        </element>
+        <element name="poolID">
+          <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+        </element>
+        <element name="poolDesc">
+          <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+        </element>
+        <element name="domesticIntl">
+          <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+        </element>
+        <element name="effectiveStatus">
+          <datatype name="VARCHAR" extendedName="VARCHAR(1)" subType="DATASOURCE_TYPE" type="STRING" maxLength="1"/>
+        </element>
+        <element name="effectiveDate">
+          <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+        </element>
+      </datatype>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1719384429678</attribute>
+  <attribute name="creatorUserDomain" type="STRING">ldap</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20281</attribute>
+  <attribute name="creatorUserName" type="STRING">cchikkan</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1719673836139</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">ldap</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20281</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">cchikkan</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1719384429678</attribute>
+</metadata>

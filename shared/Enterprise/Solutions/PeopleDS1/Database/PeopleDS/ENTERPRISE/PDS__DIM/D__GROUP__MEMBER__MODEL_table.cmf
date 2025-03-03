@@ -1,0 +1,387 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:d592c412-f19b-319c-a531-ead4825a55df -->
+<metadata name="D_GROUP_MEMBER_MODEL" path="/shared/Enterprise/Solutions/PeopleDS1/Database/PeopleDS/ENTERPRISE/PDS_DIM/D_GROUP_MEMBER_MODEL" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="TABLE">
+  <columns>
+    <column name="GROUP_DN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[DN of the Active Directory group in the eDir identity vault]]></annotation>
+    </column>
+    <column name="GROUP_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[metagroup  - An LDAP group whose members consist of groups.
+authgroup - Any LDAP group currently used for authorization.
+                 Think Unix groups, AD groups, Channels Groups, QGroups, etc...
+ app admin - The Admin of an application, responsible for implementing
+                         application security. Think Todd Cantor and Cognos, etc...]]></annotation>
+    </column>
+    <column name="GROUP_FULL_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Groups are categorized by GROUP_TYPE which often correlated with how that group is used or where it originates from.
+
+GROUP_TYPE, DESCRIPTION
+application=?
+qgroup=user defined groups maintained in the QGroup application
+mail-list=global email lists
+unix=unix groups
+channel=?
+windows=?]]></annotation>
+    </column>
+    <column name="GROUP_TYPE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[metagroup  - An LDAP group whose members consist of groups.
+authgroup - Any LDAP group currently used for authorization.
+                 Think Unix groups, AD groups, Channels Groups, QGroups, etc...
+ app admin - The Admin of an application, responsible for implementing
+                         application security. Think Todd Cantor and Cognos, etc...]]></annotation>
+    </column>
+    <column name="LIST_TYPE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Group Domain is an employee specific attribute that contain the values (&quot;AP&quot;, &quot;EU&quot;, &quot;MEA&quot;, &quot;NA&quot;, or &quot;SA&quot;).]]></annotation>
+    </column>
+    <column name="GROUP_DOMAIN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Description of the Group - its purpose, its type and rationale for setup in LDAP.]]></annotation>
+    </column>
+    <column name="GROUP_DESCRIPTION" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The QGroups application includes the ability to define a &quot;Subscription Policy&quot; for each Qgroup. These Policy types define how the application manages group membership, and how it authorizes group membership subscription requests. Some application managers may wish to make decisions about how they use a qGroup in their app, depending on the type of subscription policy defined for the group. As an example, some apps may wish to restrict use of &quot;open&quot; groups which allow any user to add themselves to the qGroup.
+Subscription Types:
+
+open - Users may add themselves to these groups without Admin approval. 
+openfilter - Users may add themselves to this group, as long as they match the criteria specified by an Admin defined ldap filter. 
+Example: an Admin may define a filter of (departmentnumber=3562 *) to
+allow all members of department 3562 to join the group at their request.
+workflow - Users may submit a request to be added to the group. Admins may choose to approve. 
+closed - Admins manually manage the group membership of these groups. 
+
+[edit] Implementation
+The Subscription Policy is published to the LDAP Service Directory via the Identity Vault. The published attribute is qcSubPolicy. This attribute is a single valued attribute, as only one policy definition may be active on a group at a time.
+
+Example:
+
+dn: cn=mc-sub,ou=qgroups,ou=groups,o=qualcomm
+qcSubPolicy: closed
+qcGroupType: qgroup
+owner: uid=mchiles,ou=people,o=qualcomm
+objectClass: groupOfNames
+objectClass: qcAuxGroup
+objectClass: Top
+cn: mc-sub]]></annotation>
+    </column>
+    <column name="GROUP_SUBSCRIPTION_POLICY" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Email address for the Group.]]></annotation>
+    </column>
+    <column name="GROUP_MAIL" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMP_DN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMP_CN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMP_USERID" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The unique and permanent Employer Identification that is assigned to Qualcomm workers. Primary index of the Empployee table.]]></annotation>
+    </column>
+    <column name="EMP_NUM" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The unique and permanent Employer GUID that is assigned to Qualcomm workers. An alternate ID to identify an Employee.]]></annotation>
+    </column>
+    <column name="EMP_GUID" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The Unique Identifier of the Employee in the Oracle HR System in the Person Table.]]></annotation>
+    </column>
+    <column name="EMP_FIRST_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Middle Name of the Employee as per records verified by an I-9 Form at the time of joining Qualcomm on the first day.]]></annotation>
+    </column>
+    <column name="EMP_MID_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Last Name of the Employee as per records verified by an I-9 Form at the time of joining Qualcomm on the first day.]]></annotation>
+    </column>
+    <column name="EMP_LAST_NAME" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Email of the Employee as per records - Qualcomm Email Address as defined in Active Directory. Example: John.S.Smith@qualcomm.com or jdoe@qualcomm.com]]></annotation>
+    </column>
+    <column name="EMP_EMAIL" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[&quot;Employee Status is an worker`s current work relationship with Qualcomm.Values for Exempt employees: 
+A=Active 
+L=Leave 
+R=Retired 
+T=Terminated 
+D=Deceased
+Values for Contingent Workers: 
+A=Active 
+T=Terminated &quot;]]></annotation>
+    </column>
+    <column name="EMP_STATUS" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(1)" subType="DATASOURCE_TYPE" type="STRING" maxLength="1"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The Unique Department Identifier to which the Employee is currently assigned to.]]></annotation>
+    </column>
+    <column name="EMP_DEPT_ID" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The Department to which the Employee is currently assigned to.]]></annotation>
+    </column>
+    <column name="EMP_DEPARTMENT" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(240)" subType="DATASOURCE_TYPE" type="STRING" maxLength="240"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The Business Unit to which the Employee is currently assigned to.]]></annotation>
+    </column>
+    <column name="EMP_BUSINESS_UNIT_ID" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMP_EXTENSION" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The City the Employee belongs to]]></annotation>
+    </column>
+    <column name="EMP_CITY" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The State the Employee belongs to]]></annotation>
+    </column>
+    <column name="EMP_STATE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The Country the Employee belongs to]]></annotation>
+    </column>
+    <column name="EMP_COUNTRY" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Professional Affiliations of the Employee]]></annotation>
+    </column>
+    <column name="EMP_AFFILIATION" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(250)" subType="DATASOURCE_TYPE" type="STRING" maxLength="250"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="EMP_LOCALE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Employee Type is an decription of the Employee identifier to differentiate types of employees such as Employee Exempt Worker; Contractors; Interns; Other Contingent Worker Types.]]></annotation>
+    </column>
+    <column name="EMP_TYPE" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(30)" subType="DATASOURCE_TYPE" type="STRING" maxLength="30"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Business Unit that the employee belongs to]]></annotation>
+    </column>
+    <column name="EMP_TYPE_DESC" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[The name of the Business Unit that the group member belongs to.  Determined by the Department that the employee (group member) reports to.  If the member is not an employee (in the case of service accounts) the Business Unit is left blank.]]></annotation>
+    </column>
+    <column name="EMP_BUSINESS_UNIT" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[TRUE if this group member is an admin of the group.  Groups can have 1 or more Administrator.  Otherwise, FALSE.
+
+@see Owner]]></annotation>
+    </column>
+    <column name="EMP_AD_DOMAIN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[owner of the unit]]></annotation>
+    </column>
+    <column name="EMP_EMAIL_DOMAIN" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(100)" subType="DATASOURCE_TYPE" type="STRING" maxLength="100"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation><![CDATA[Member of the business unit]]></annotation>
+    </column>
+    <column name="ADMINISTRATOR" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(5)" subType="DATASOURCE_TYPE" type="STRING" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="OWNER" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(5)" subType="DATASOURCE_TYPE" type="STRING" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="MEMBER" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(5)" subType="DATASOURCE_TYPE" type="STRING" maxLength="5"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+    <privilege user="anonymous" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="composite" privileges="READ"/>
+    <privilege group="all" domain="dynamic" privileges="READ"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1719668902081</attribute>
+  <attribute name="creatorUserDomain" type="STRING">ldap</attribute>
+  <attribute name="creatorUserId" type="INTEGER">20281</attribute>
+  <attribute name="creatorUserName" type="STRING">cchikkan</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1719673836139</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">ldap</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">20281</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">cchikkan</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1719668902081</attribute>
+</metadata>
