@@ -5,7 +5,7 @@
     <parameter name="in_value" direction="IN" nullable="true">
       <datatype name="VARCHAR" type="STRING" maxLength="100"/>
     </parameter>
-    <parameter name="result" direction="OUT" nullable="true">
+    <parameter name="result_total" direction="OUT" nullable="true">
       <datatype name="VARCHAR" type="STRING" maxLength="100"/>
     </parameter>
   </parameters>
